@@ -1,0 +1,11 @@
+In-scope: app.domain.com
+Out-of-scope: *.domain.ca
+
+Rate-limit: 1000
+Contact: security@domain.com
+
+PGP-Key:
+
+Security-page: http://www.domain.com/security-policy
+
+Disclosure: Full-90

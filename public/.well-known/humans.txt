@@ -1,0 +1,11 @@
+/* TEAM */
+Role: Sr. Engineer
+Name: will Farrell
+Github: willfarrell
+Location: Calgary, Canada
+
+/* SITE */
+Last update: 2017-09-10
+Standards: HTML5, CSS3, ES6
+Components: React, Material-UI
+Software: IntelliJ IDEA
