@@ -27,6 +27,7 @@ $ npm install
 - theme template
 
 ### Dev
+- root module import supported
 - eslint
 - jest & enzyme with polyfills
 

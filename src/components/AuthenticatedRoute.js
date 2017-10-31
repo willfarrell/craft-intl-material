@@ -19,7 +19,7 @@ const AuthenticatedRoute = (props) => {
 AuthenticatedRoute.propTypes = {
     component: PropTypes.func.isRequired,
     childProps: PropTypes.object.isRequired,
-    location: PropTypes.object.isRequired
+    location: PropTypes.object
 };
 
 export default AuthenticatedRoute;

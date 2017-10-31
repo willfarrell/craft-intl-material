@@ -1,6 +1,6 @@
 {
     "parser": "",
-    "parserOptions":{
+    "parserOptions": {
         "allowImportExportEverywhere": true
     },
     "extends": [
@@ -13,7 +13,7 @@
     "globals": {
         "Promise": true
     },
-    "ecmaFeatures":{
+    "ecmaFeatures": {
         "modules": true
     },
     "rules": {

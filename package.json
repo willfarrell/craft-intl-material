@@ -32,7 +32,7 @@
     "react-test-renderer": "^16.0.0"
   },
   "scripts": {
-    "start": "PORT=8080 react-scripts start",
+    "start": "NODE_PATH=src/ PORT=8080 react-scripts start",
     "build": "react-scripts build",
     "test": "react-scripts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill",
     "eject": "react-scripts eject",
