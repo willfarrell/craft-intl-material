@@ -50,8 +50,9 @@
             var c = a[a.length - 1];
 
             switch(a[0]) {
-                case 'Number': return (typeof Number[c] !== 'function');
                 case 'Array': return (typeof Array.prototype[c] !== 'function');
+                case 'Number': return (typeof Number[c] !== 'function');
+                case 'Object': return (typeof Object[c] !== 'function');
             }
 
             return !window[a[0]];
