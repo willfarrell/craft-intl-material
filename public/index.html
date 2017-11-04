@@ -33,8 +33,29 @@
     We're sorry, you need to enable JavaScript to run this web site.
 </noscript>
 <script>
-    // polyfills
-    var features = [
+    function missingFeatures(features) {
+        return features.filter(function (f) {
+            return (f.indexOf('~') !== -1)
+                ? window[f.split('.')[0]]
+                : f.split('.').reduce(function (k, v) {
+                    return k[v];
+                }, window) === undefined;
+        });
+    }
+
+    function polyfill(features) {
+        var missing = missingFeatures(features);
+
+        if (missing.length) {
+            var cdn = 'https://cdn.polyfill.io/v2/polyfill.min.js?features=' + missing.join(',') + '&flags=gated';
+            var js = document.createElement('script');
+            js.src = cdn;
+            js.async = true;
+            document.head.appendChild(js);
+        }
+    }
+    // https://polyfill.io/v2/docs/features/
+    polyfill([
         'Array.prototype.includes', // IE 11 - material-ui/Select
         'Number.parseInt',          // IE 11
         'Number.parseFloat',        // IE 11
@@ -42,31 +63,7 @@
         'Set',                      // IE 10
         'requestAnimationFrame',    // IE  9
         'Intl.~locale.en-CA'        // IE 10, Safari 9
-    ];
-
-    function missingFeatures() {
-        return features.filter(function (f) {
-            var a = f.split('.');
-            var c = a[a.length - 1];
-
-            switch(a[0]) {
-                case 'Array': return (typeof Array.prototype[c] !== 'function');
-                case 'Number': return (typeof Number[c] !== 'function');
-                case 'Object': return (typeof Object[c] !== 'function');
-            }
-
-            return !window[a[0]];
-        });
-    }
-
-    var missing = missingFeatures();
-
-    if (missing.length) {
-        var cdn = 'https://cdn.polyfill.io/v2/polyfill.min.js?features=' + missing.join();
-        var js = document.createElement('script');
-        js.src = cdn;
-        document.head.appendChild(js);
-    }
+    ]);
 </script>
 <div id="root"></div>
 </body>
