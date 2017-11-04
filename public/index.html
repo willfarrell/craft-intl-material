@@ -33,23 +33,18 @@
     We're sorry, you need to enable JavaScript to run this web site.
 </noscript>
 <script>
-    function missingFeatures(features) {
-        return features.filter(function (f) {
+    function polyfill(features) {
+        var missing = features.filter(function (f) {
             return (f.indexOf('~') !== -1)
                 ? window[f.split('.')[0]]
                 : f.split('.').reduce(function (k, v) {
-                    return k[v];
-                }, window) === undefined;
+                return k[v];
+            }, window) === undefined;
         });
-    }
-
-    function polyfill(features) {
-        var missing = missingFeatures(features);
 
         if (missing.length) {
-            var cdn = 'https://cdn.polyfill.io/v2/polyfill.min.js?features=' + missing.join(',') + '&flags=gated';
             var js = document.createElement('script');
-            js.src = cdn;
+            js.src = 'https://cdn.polyfill.io/v2/polyfill.min.js?features=' + missing.join(',') + '&flags=gated';
             js.async = true;
             document.head.appendChild(js);
         }
