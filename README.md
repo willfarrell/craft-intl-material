@@ -31,9 +31,12 @@ $ npm install
 - eslint
 - jest & enzyme with polyfills
 
+
 ## TODO
-- sonar
 - git-labelmaker - https://medium.com/@dave_lunny/sane-github-labels-c5d2e6004b63
+- size-limit
+- node-prune
+- coveralls
   
 ## Sources
 - https://github.com/stoyan/craft

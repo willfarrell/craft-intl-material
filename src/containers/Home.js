@@ -1,7 +1,7 @@
 import React from 'react';
 import PropTypes from 'prop-types';
-import { injectIntl, intlShape } from 'react-intl';
-import { withStyles } from 'material-ui/styles';
+import {injectIntl, intlShape} from 'react-intl';
+import {withStyles} from 'material-ui/styles';
 
 import Typography from 'material-ui/Typography';
 
@@ -10,11 +10,11 @@ const styles = () => ({
 });
 
 const Home = (props) => {
-    const { classes, intl } = props;
+    const {classes, intl} = props;
 
     return (<div>
         <Typography type="display4" className={classes.title}>
-            {intl.formatMessage({ id:'home.message' })}
+            {intl.formatMessage({id: 'home.message'})}
         </Typography>
     </div>);
 };

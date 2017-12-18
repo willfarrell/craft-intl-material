@@ -7,7 +7,7 @@ import theme from './theme';
 
 // i18n
 import { IntlProvider } from 'react-intl';
-import initLocale  from 'react-intl-locale';
+import initLocale,  {getLocaleMessages}  from 'react-intl-locale';
 
 // routing
 import { HashRouter as Router } from 'react-router-dom';
@@ -20,7 +20,6 @@ import Footer from './containers/Footer';
 // Set locale
 const defaultLocale = 'en-CA';
 const locale = initLocale(defaultLocale, []);
-const messages = require('./data/i18n/en-CA.global.json');
 
 const styles = (theme) => ({
     // Be sure to include defaults listed here if planning to override
@@ -59,15 +58,27 @@ class App extends Component {
     constructor (props) {
         super(props);
         this.state = {
-            isAuthenticated: false
+            isAuthenticated: false,
+            locale: locale,
+            messages: {}
         };
     }
 
+    componentWillMount() {
+        getLocaleMessages(this.state.locale, [
+            'data/i18n/{locale}.global.json'
+        ]).then((messages) => {
+            this.setState({messages});
+        });
+    }
+
     render () {
-        const { locale, isAuthenticated } = this.state;
+        const { locale, messages, isAuthenticated } = this.state;
         const { classes } = this.props;
 
         const childProps = { isAuthenticated, locale };
+
+        if (!Object.keys(messages).length) return (<div></div>);
 
         return (
             <MuiThemeProvider theme={theme}>

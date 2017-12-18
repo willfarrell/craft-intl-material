@@ -5,7 +5,7 @@ import PropTypes from 'prop-types';
 import {Route, Switch} from 'react-router-dom';
 import asyncComponent from './components/AsyncComponent';
 import AppliedRoute from './components/AppliedRoute';
-import AuthenticatedRoute from './components/AuthenticatedRoute';
+//import AuthenticatedRoute from './components/AuthenticatedRoute';
 import UnauthenticatedRoute from './components/UnauthenticatedRoute';
 
 // pages
@@ -25,7 +25,7 @@ const Routes = (props) => {
     );
 };
 
-Routes.PropTypes = {
+Routes.propTypes = {
     childProps: PropTypes.object.isRequired
 };
 
