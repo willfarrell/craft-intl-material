@@ -9,9 +9,9 @@ import AppliedRoute from './components/AppliedRoute';
 import UnauthenticatedRoute from './components/UnauthenticatedRoute';
 
 // pages
-const AsyncHome = asyncComponent(() => import('./containers/Home'));
-const AsyncLogin = asyncComponent(() => import('./containers/Login'));
-const AsyncNotFound = asyncComponent(() => import('./containers/NotFound'));
+const AsyncHome = asyncComponent(() => import('./routes/Home'));
+const AsyncLogin = asyncComponent(() => import('./routes/Login'));
+const AsyncNotFound = asyncComponent(() => import('./routes/NotFound'));
 
 const Routes = (props) => {
     const {childProps} = props;

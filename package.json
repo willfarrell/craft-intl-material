@@ -9,6 +9,7 @@
   "dependencies": {
     "material-ui": "^1.0.0-beta.24",
     "material-ui-icons": "^1.0.0-beta.15",
+    "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-intl": "^2.4.0",
@@ -37,6 +38,6 @@
     "test": "react-scripts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill",
     "eject": "react-scripts eject",
     "lint": "eslint --fix --max-warnings=0 --config=./.eslintrc --ext .js --ext .json ./src/.",
-    "sonar": "sonarwhal http://dev.domain.com"
+    "scan": "sonarwhal http://dev.domain.com"
   }
 }

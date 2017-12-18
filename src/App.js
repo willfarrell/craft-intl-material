@@ -14,8 +14,8 @@ import { HashRouter as Router } from 'react-router-dom';
 import Routes from './Routes';
 
 // Components
-import Header from './containers/Header';
-import Footer from './containers/Footer';
+import Header from './components/Header';
+import Footer from './components/Footer';
 
 // Set locale
 const defaultLocale = 'en-CA';
