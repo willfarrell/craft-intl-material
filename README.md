@@ -1,4 +1,29 @@
-# CRAFT: Create React App From Template
+<h1 align="center">
+  <img src="https://raw.githubusercontent.com/willfarrell/craft-react-material/master/docs/images/header.svg" alt="React Logo" width="200">
+  <br>
+  CRAFT: Create React App From Template
+  <br>
+  <br>
+</h1>
+
+<p align="center">
+  <a href="https://github.com/willfarrell/craft-react-material"><img src="https://img.shields.io/github/stars/badges/shields.svg?style=social&label=Stars" alt="Stars" /></a>
+  <a href="https://www.npmjs.com/package/craft-react-material"><img src="https://img.shields.io/npm/v/craft-react-material.svg" alt="npm version"></a>
+  <a href="https://www.npmjs.com/package/craft-react-material"><img src="https://img.shields.io/npm/dm/craft-react-material.svg" alt="npm downloads"></a>
+  <a href="https://standardjs.com"><img src="https://img.shields.io/badge/code_style-standard-brightgreen.svg" alt="Standard - JavaScript Style Guide"></a>
+  <a href="https://github.com/prettier/prettier"><img alt="code style: prettier" src="https://img.shields.io/badge/code_style-prettier-ff69b4.svg"></a>
+  <a href="https://www.npmjs.com/package/craft-react-material"><img src="https://img.shields.io/npm/l/craft-react-material.svg" alt="npm license" /></a>
+</p>
+<p align="center">
+  <a href="https://travis-ci.org/willfarrell/craft-react-material"><img src="https://img.shields.io/travis/willfarrell/craft-react-material/master.svg" alt="travis"></a>
+  <a href="https://coveralls.io/github/willfarrell/craft-react-material"><img src="https://img.shields.io/coveralls/github/jekyll/jekyll.svg" alt="Coveralls"></a>
+  <!-- sonarqube - https://github.com/QualInsight/qualinsight-plugins-sonarqube-badges/wiki/Quality-Gate-status-badges -->
+  <a href="https://snyk.io/test/github/willfarrell/craft-react-material"><img src="https://snyk.io/test/github/willfarrell/craft-react-material/badge.svg" alt="Known Vulnerabilities" /></a>
+  <a href="https://david-dm.org/willfarrell/craft-react-material"><img src="https://img.shields.io/david/willfarrell/craft-react-material.svg" alt="dependencies" /></a>
+  <a href="https://david-dm.org/willfarrell/craft-react-material?type=dev"><img src="https://img.shields.io/david/dev/willfarrell/craft-react-material.svg" alt="dev dependencies" /></a>
+  <a href="https://david-dm.org/willfarrell/craft-react-material?type=optional"><img src="https://img.shields.io/david/optional/willfarrell/craft-react-material.svg" alt="optional dependencies" /></a>
+  <a href="https://david-dm.org/willfarrell/craft-react-material?type=peer"><img src="https://img.shields.io/david/peer/willfarrell/craft-react-material.svg" alt="peer dependencies" /></a>
+</p>
 
 ## Initialize
 ```bash
@@ -18,6 +43,10 @@ $ npm install
 - [ ] Create a 4096x4096 png icon
 - [ ] Add favicons (https://realfavicongenerator.net)
 
+### Docs
+- [ ] Update `docs/README.md`
+- [ ] Delete this file 
+
 ## Features
 ### App 
 - i18n built in
@@ -28,16 +57,12 @@ $ npm install
 
 ### Dev
 - root module import supported
-- eslint
-- jest & enzyme with polyfills
+- Code Quality
+  - `prettier-standard` (format & linting)
+- Testing
+  - jest & enzyme with polyfills (frontend unit & integration tests)
+  - mocha & chai (module unit & integration tests)
 
-
-## TODO
-- git-labelmaker - https://medium.com/@dave_lunny/sane-github-labels-c5d2e6004b63
-- size-limit
-- node-prune
-- coveralls
-  
 ## Sources
 - https://github.com/stoyan/craft
 - https://github.com/facebookincubator/create-react-app
