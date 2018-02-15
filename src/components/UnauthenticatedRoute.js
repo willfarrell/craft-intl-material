@@ -33,7 +33,7 @@ const UnauthenticatedRoute = (props) => {
     />)
 };
 
-UnauthenticatedRoute.propTypes = {
+UnauthenticatedRoute.PropTypes = {
     component: PropTypes.func.isRequired,
     childProps: PropTypes.object.isRequired
 };

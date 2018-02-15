@@ -8,7 +8,7 @@ const AppliedRoute = (props) => {
     return (<Route {...rest} render={props => <C {...props} {...childProps} />} />)
 };
 
-AppliedRoute.propTypes = {
+AppliedRoute.PropTypes = {
     component: PropTypes.func.isRequired,
     childProps: PropTypes.object.isRequired
 };

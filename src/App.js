@@ -104,7 +104,7 @@ class App extends Component {
     }
 }
 
-App.propTypes = {
+App.PropTypes = {
     classes: PropTypes.object.isRequired
 };
 

@@ -19,7 +19,7 @@ const NotFound = (props) => {
     </div>);
 };
 
-NotFound.propTypes = {
+NotFound.PropTypes = {
     classes: PropTypes.object.isRequired,
     intl: intlShape.isRequired
 };

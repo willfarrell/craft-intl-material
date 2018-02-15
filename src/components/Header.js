@@ -28,7 +28,7 @@ const Header = (props) => {
     );
 };
 
-Header.propTypes = {
+Header.PropTypes = {
     classes: PropTypes.object.isRequired,
     intl: intlShape.isRequired
 };

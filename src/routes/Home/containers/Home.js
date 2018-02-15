@@ -41,7 +41,7 @@ class HomeContainer extends Component {
     };
 }
 
-HomeContainer.propTypes = {
+HomeContainer.PropTypes = {
     classes: PropTypes.object.isRequired,
     intl: intlShape.isRequired
 };

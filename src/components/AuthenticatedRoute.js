@@ -16,7 +16,7 @@ const AuthenticatedRoute = (props) => {
     />)
 };
 
-AuthenticatedRoute.propTypes = {
+AuthenticatedRoute.PropTypes = {
     component: PropTypes.func.isRequired,
     childProps: PropTypes.object.isRequired,
     location: PropTypes.object

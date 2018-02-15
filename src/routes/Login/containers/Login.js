@@ -19,7 +19,7 @@ const Login = (props) => {
     </div>);
 };
 
-Login.propTypes = {
+Login.PropTypes = {
     classes: PropTypes.object.isRequired,
     intl: intlShape.isRequired
 };

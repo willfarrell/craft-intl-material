@@ -27,7 +27,7 @@ const Footer = (props) => {
     );
 };
 
-Footer.propTypes = {
+Footer.PropTypes = {
     classes: PropTypes.object.isRequired,
     intl: intlShape.isRequired
 };
