@@ -12,6 +12,7 @@ import initLocale,  {getLocaleMessages}  from 'react-intl-locale';
 // routing
 import { HashRouter as Router } from 'react-router-dom';
 import Routes from './Routes';
+import { OnUpdate } from 'rrc';
 
 // Components
 import Header from './components/Header';
@@ -66,7 +67,7 @@ class App extends Component {
 
     componentWillMount() {
         getLocaleMessages(this.state.locale, [
-            'data/i18n/{locale}.global.json'
+            'static/lang/{locale}.global.json'
         ]).then((messages) => {
             this.setState({messages});
         });
@@ -88,6 +89,10 @@ class App extends Component {
                 >
                     <Router className={classes.root}>
                         <div>
+                            <OnUpdate immediate
+                                call={(location) => {
+                                    //analyticsTool.log(location.pathname)
+                                }} />
                             <Header/>
                             <Routes childProps={childProps}/>
                             <Footer/>

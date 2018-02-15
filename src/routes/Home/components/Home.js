@@ -14,7 +14,7 @@ const Home = (props) => {
 
     return (<div>
         <Typography type="display4" className={classes.title}>
-            {intl.formatMessage({id: 'title'})}
+            {intl.formatMessage({id: 'title'})} {intl.formatMessage({ id: 'header' })}
         </Typography>
     </div>);
 };

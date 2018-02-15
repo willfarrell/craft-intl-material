@@ -8,12 +8,12 @@
   "private": true,
   "dependencies": {
     "material-ui": "^1.0.0-beta.24",
-    "material-ui-icons": "^1.0.0-beta.15",
     "prop-types": "^15.6.0",
     "react": "^16.2.0",
     "react-dom": "^16.2.0",
     "react-intl": "^2.4.0",
-    "react-intl-locale": "^0.5.2",
+    "react-intl-locale": "^0.5.3",
+    "react-intl-material": "^0.3.0",
     "react-router-dom": "^4.2.2"
   },
   "devDependencies": {

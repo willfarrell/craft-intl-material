@@ -1,0 +1,19 @@
+#!/usr/bin/env bash
+
+dir=public/static/lang
+mkdir -p ${dir}
+
+move() {
+    list=$(find $1 -path \*/lang/\*.json)
+
+    for item in ${list}; do
+        file=$(basename "${item%}")
+        echo "${item} => ${dir}/${file}"
+        cat ${item} | jq -c . > ${dir}/${file}
+    done
+}
+
+move src
+move node_modules/react-intl-material
+
+echo "Done!"

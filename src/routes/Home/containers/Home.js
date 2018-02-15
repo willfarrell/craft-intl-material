@@ -4,7 +4,7 @@ import {injectIntl, intlShape} from 'react-intl';
 import {withStyles} from 'material-ui/styles';
 
 import { IntlProvider } from 'react-intl';
-import {getLocaleMessages}  from 'react-intl-locale';
+import { getLocaleMessages }  from 'react-intl-locale';
 
 import Home from '../components/Home';
 
@@ -23,7 +23,8 @@ class HomeContainer extends Component {
 
     componentWillMount() {
         getLocaleMessages(this.state.locale, [
-            'data/i18n/{locale}.home.json'
+            'static/lang/{locale}.global.json',
+            'static/lang/{locale}.home.json'
         ]).then((messages) => {
             this.setState({messages});
         });

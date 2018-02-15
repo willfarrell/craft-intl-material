@@ -25,7 +25,7 @@ const Routes = (props) => {
     );
 };
 
-Routes.propTypes = {
+Routes.PropTypes = {
     childProps: PropTypes.object.isRequired
 };
 

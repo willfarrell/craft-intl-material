@@ -1,0 +1,67 @@
+#!/usr/bin/env node
+
+'use strict';
+
+const util = require('util');
+const path = require('path');
+const fs = require('fs');
+
+const glob = util.promisify(require('glob'));
+const $RefParser = require('json-schema-ref-parser');
+const writeFile = util.promisify(fs.writeFile);
+const defaults = require('json-schema-defaults');
+
+// args
+const srcGlob = './src/data/schemas/*.json';    // Note files starting w/ `definitions.` will be skipped in code
+const destDir = './src/data/schema/';
+const defaultDir = './src/data/defaults/';
+
+/*
+TODO
+- make own repo
+- make cli
+- have glob passed in
+
+- make defaults file: json-schema-defaults
+ */
+
+// make definitions file from db
+
+console.log('Building JSON Schemas & Defaults ...');
+glob(srcGlob)
+    .then((files) => {
+        const arr = [];
+        files.forEach((filePath) => {
+            const parts = path.parse(filePath);
+            const file = parts.base;
+            if (file.indexOf('definitions.') === 0) { return; }    // skip definitions files
+
+            console.log('Processing:', file);
+
+            const schemaFile = destDir + file;
+            const defaultFile = defaultDir + file;
+
+            const deref = $RefParser.dereference(filePath)
+                .then((schemaJSON) => {
+                    const defaultJSON = defaults(schemaJSON);
+                    //console.log(schemaFile, schemaJSON);
+                    //console.log(defaultFile, defaultJSON);
+                    return Promise.all([
+                        writeFile(schemaFile, JSON.stringify(schemaJSON, null, 2), {encoding:'utf8'}),
+                        writeFile(defaultFile, JSON.stringify(defaultJSON, null, 2), {encoding:'utf8'})
+                    ]);
+                })
+                .catch((err) => {
+                    console.error('Error: deref', filePath, err);
+                });
+            arr.push(deref);
+        });
+        return Promise.all(arr);
+    })
+    .then(() => {
+        console.log('Done!');
+    })
+    .catch((err) => {
+        console.error('Error: glob', err);
+    });
+
