@@ -65,8 +65,6 @@ $ npm install
 
 ### Dev
 - root module import supported
-- Code Quality
-  - `prettier-standard` (format & linting)
 - Testing
   - jest & enzyme with polyfills (frontend unit & integration tests)
   - mocha & chai (module unit & integration tests)
