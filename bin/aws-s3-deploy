@@ -41,17 +41,20 @@ sync() {
         --cache-control "max-age=3600"
 }
 
+sync "*.txt"         "text/plain; charset=utf-8"
 sync "*.webmanifest" "application/manifest+json; charset=utf-8"
 sync "*.ico"         "image/x-icon"
 sync "*.js"          "text/javascript; charset=utf-8"
+sync "*.json"        "application/json; charset=utf-8"
+sync "*.png"         "image/png"
 
+# Upload remaining MIME
 aws s3 sync ${SOURCE_DIR} s3://${BUCKET_NAME} \
     --sse --metadata-directive "REPLACE" \
-    --exclude "*.html" --exclude "*.js"  --exclude "*.json" --exclude "*.ico" --exclude "*.webmanifest" \
+    --exclude "*.html" --exclude "*.js"  --exclude "*.json" --exclude "*.ico" --exclude "*.webmanifest" --exclude "*.txt" --exclude "*.png" \
     --exclude ".DS_Store" \
     --cache-control "max-age=3600"
 
-sync "*.json"        "application/json; charset=utf-8"
 sync "*.html"        "text/html; charset=utf-8"
 
 # Clear CloudFront Cache

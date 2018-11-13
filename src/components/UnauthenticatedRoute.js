@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
 
 function querystring (name, url = window.location.href) {
@@ -33,9 +33,9 @@ const UnauthenticatedRoute = (props) => {
     />)
 };
 
-UnauthenticatedRoute.PropTypes = {
-    component: PropTypes.func.isRequired,
-    childProps: PropTypes.object.isRequired
+UnauthenticatedRoute.propTypes = {
+    component: propTypes.func.isRequired,
+    childProps: propTypes.object.isRequired
 };
 
 export default UnauthenticatedRoute;

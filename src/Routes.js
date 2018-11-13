@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 // routing
 import {Route, Switch} from 'react-router-dom';
@@ -20,13 +20,13 @@ const Routes = (props) => {
             <AppliedRoute path='/' exact component={AsyncHome} childProps={childProps}/>
             <UnauthenticatedRoute path='/login' exact component={AsyncLogin} childProps={childProps}/>
             {/*<AuthenticatedRoute path='/app' exact component={AsyncAppHome} childProps={childProps} />*/}
-            <Route component={AsyncNotFound} />
+            <UnauthenticatedRoute component={AsyncNotFound} childProps={childProps} />
         </Switch>
     );
 };
 
-Routes.PropTypes = {
-    childProps: PropTypes.object.isRequired
+Routes.propTypes = {
+    childProps: propTypes.object.isRequired
 };
 
 export default Routes;

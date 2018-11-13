@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import { Route } from 'react-router-dom';
 
 const AppliedRoute = (props) => {
@@ -8,9 +8,9 @@ const AppliedRoute = (props) => {
     return (<Route {...rest} render={props => <C {...props} {...childProps} />} />)
 };
 
-AppliedRoute.PropTypes = {
-    component: PropTypes.func.isRequired,
-    childProps: PropTypes.object.isRequired
+AppliedRoute.propTypes = {
+    component: propTypes.func.isRequired,
+    childProps: propTypes.object.isRequired
 };
 
 export default AppliedRoute;

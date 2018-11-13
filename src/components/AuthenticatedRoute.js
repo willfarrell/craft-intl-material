@@ -1,5 +1,5 @@
 import React from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import { Route, Redirect } from 'react-router-dom';
 
 const AuthenticatedRoute = (props) => {
@@ -16,10 +16,10 @@ const AuthenticatedRoute = (props) => {
     />)
 };
 
-AuthenticatedRoute.PropTypes = {
-    component: PropTypes.func.isRequired,
-    childProps: PropTypes.object.isRequired,
-    location: PropTypes.object
+AuthenticatedRoute.propTypes = {
+    component: propTypes.func.isRequired,
+    childProps: propTypes.object.isRequired,
+    location: propTypes.object
 };
 
 export default AuthenticatedRoute;

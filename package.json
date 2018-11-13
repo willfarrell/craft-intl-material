@@ -1,37 +1,29 @@
 {
   "name": "create-react-app-from-template",
-  "version": "1.0.0",
+  "version": "2.0.0",
   "engines": {
     "node": ">8.8",
     "npm": ">5.5"
   },
   "private": true,
   "dependencies": {
-    "material-ui": "^1.0.0-beta.24",
-    "prop-types": "^15.6.0",
-    "react": "^16.2.0",
-    "react-dom": "^16.2.0",
-    "react-intl": "^2.4.0",
+    "@material-ui/core": "^3.5.1",
+    "prop-types": "^15.6.2",
+    "react": "^16.6.1",
+    "react-dom": "^16.6.1",
+    "react-intl": "^2.7.2",
     "react-intl-locale": "^0.5.3",
-    "react-intl-material": "^0.3.0",
-    "react-router-dom": "^4.2.2",
+    "react-intl-material": "^1.0.0",
+    "react-router-dom": "^4.3.1",
     "rrc": "^0.10.1"
   },
   "devDependencies": {
-    "enzyme": "^3.2.0",
-    "enzyme-adapter-react-16": "^1.1.0",
-    "eslint": "^4.13.1",
-    "eslint-config-react": "^1.1.7",
-    "eslint-config-standard": "^10.2.1",
-    "eslint-plugin-json": "^1.2.0",
-    "eslint-plugin-node": "^5.2.0",
-    "eslint-plugin-promise": "^3.5.0",
-    "eslint-plugin-react": "^7.5.1",
-    "eslint-plugin-standard": "^3.0.1",
-    "jest-cli": "^21.2.1",
-    "raf": "^3.4.0",
-    "react-scripts": "1.0.13",
-    "react-test-renderer": "^16.2.0"
+    "enzyme": "^3.7.0",
+    "enzyme-adapter-react-16": "^1.7.0",
+    "jest-cli": "^23.6.0",
+    "raf": "^3.4.1",
+    "react-scripts": "^2.1.1",
+    "react-test-renderer": "^16.6.1"
   },
   "scripts": {
     "start": "NODE_PATH=src/ PORT=8080 react-scripts start",
@@ -40,5 +32,11 @@
     "eject": "react-scripts eject",
     "lint": "eslint --fix --max-warnings=0 --config=./.eslintrc --ext .js --ext .json ./src/.",
     "scan": "sonarwhal http://dev.domain.com"
-  }
+  },
+  "browserslist": [
+    ">0.2%",
+    "not dead",
+    "not ie <= 11",
+    "not op_mini all"
+  ]
 }

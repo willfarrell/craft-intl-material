@@ -1,11 +1,12 @@
 import React from 'react';
-import PropTypes from 'prop-types';
-import { injectIntl, intlShape } from 'react-intl';
-import { withStyles } from 'material-ui/styles';
+import propTypes from 'prop-types';
+import {injectIntl, intlShape} from 'react-intl';
+import {withStyles} from '@material-ui/core/styles';
 
 // UI
-import Toolbar from 'material-ui/Toolbar';
-import Typography from 'material-ui/Typography';
+import AppBar from '@material-ui/core/AppBar';
+import Toolbar from '@material-ui/core/Toolbar';
+import Typography from '@material-ui/core/Typography';
 
 const styles = () => ({
     root: {},
@@ -15,21 +16,21 @@ const styles = () => ({
 });
 
 const Header = (props) => {
-    const { classes, intl } = props;
+    const {classes, intl} = props;
 
     return (
-        <div className={classes.root}>
+        <AppBar position="fixed" color="primary">
             <Toolbar>
                 <Typography className={classes.flex}>
-                    {intl.formatMessage({ id: 'header' })}
+                    {intl.formatMessage({id: 'header'})}
                 </Typography>
             </Toolbar>
-        </div>
+        </AppBar>
     );
 };
 
-Header.PropTypes = {
-    classes: PropTypes.object.isRequired,
+Header.propTypes = {
+    classes: propTypes.object.isRequired,
     intl: intlShape.isRequired
 };
 

@@ -1,6 +1,6 @@
-import { createMuiTheme } from 'material-ui/styles';
-import createPalette from 'material-ui/styles/createPalette';
-import { indigo, pink, red, grey } from 'material-ui/colors';
+import { createMuiTheme } from '@material-ui/core/styles';
+import createPalette from '@material-ui/core/styles/createPalette';
+import { indigo, pink, red, grey } from '@material-ui/core/colors';
 
 // https://material-ui-1dab0.firebaseapp.com/customization/themes/#customizing-all-instances-of-a-component-type
 // https://material-ui-1dab0.firebaseapp.com/style/color/
@@ -22,33 +22,34 @@ const palette = createPalette({
 });
 
 const typography = {
+    useNextVariants: true,  // https://material-ui.com/style/typography/#migration-to-typography-v2
     fontFamily: '"Roboto", "Helvetica", "Arial", sans-serif',   // default
     fontSize: '1.0rem', // 14px
-    display4: {
+    h1: {
 
     },
-    display3: {
+    h2: {
 
     },
-    display2: {
+    h3: {
 
     },
-    display1: {
+    h4: {
 
     },
-    headline: {
+    h5: {
 
     },
-    title: {
+    h6: {
 
     },
-    subheading: {
-
-    },
-    body2: {
+    subtitle1: {
 
     },
     body1: {
+
+    },
+    body2: {
 
     }
 };

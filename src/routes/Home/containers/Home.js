@@ -1,7 +1,7 @@
 import React, {Component} from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 import {injectIntl, intlShape} from 'react-intl';
-import {withStyles} from 'material-ui/styles';
+import {withStyles} from '@material-ui/core/styles';
 
 import { IntlProvider } from 'react-intl';
 import { getLocaleMessages }  from 'react-intl-locale';
@@ -41,8 +41,8 @@ class HomeContainer extends Component {
     };
 }
 
-HomeContainer.PropTypes = {
-    classes: PropTypes.object.isRequired,
+HomeContainer.propTypes = {
+    classes: propTypes.object.isRequired,
     intl: intlShape.isRequired
 };
 

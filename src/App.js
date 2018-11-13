@@ -1,8 +1,8 @@
 import React, { Component } from 'react';
-import PropTypes from 'prop-types';
+import propTypes from 'prop-types';
 
 // theme
-import { MuiThemeProvider, withStyles } from 'material-ui/styles';
+import { MuiThemeProvider, withStyles } from '@material-ui/core/styles';
 import theme from './theme';
 
 // i18n
@@ -104,8 +104,8 @@ class App extends Component {
     }
 }
 
-App.PropTypes = {
-    classes: PropTypes.object.isRequired
+App.propTypes = {
+    classes: propTypes.object.isRequired
 };
 
 export default withStyles(styles)(App);
