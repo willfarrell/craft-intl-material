@@ -46,12 +46,14 @@ sync "*.webmanifest" "application/manifest+json; charset=utf-8"
 sync "*.ico"         "image/x-icon"
 sync "*.js"          "text/javascript; charset=utf-8"
 sync "*.json"        "application/json; charset=utf-8"
+sync "*.jpg"         "image/jpg"
+sync "*.jpeg"        "image/jpeg"
 sync "*.png"         "image/png"
 
 # Upload remaining MIME
 aws s3 sync ${SOURCE_DIR} s3://${BUCKET_NAME} \
     --sse --metadata-directive "REPLACE" \
-    --exclude "*.html" --exclude "*.js"  --exclude "*.json" --exclude "*.ico" --exclude "*.webmanifest" --exclude "*.txt" --exclude "*.png" \
+    --exclude "*.html" --exclude "*.js"  --exclude "*.json" --exclude "*.ico" --exclude "*.webmanifest" --exclude "*.txt" --exclude "*.png" --exclude "*.jpeg" --exclude "*.jpg" \
     --exclude ".DS_Store" \
     --cache-control "max-age=3600"
 

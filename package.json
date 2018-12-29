@@ -15,7 +15,8 @@
     "react-intl-locale": "^0.5.3",
     "react-intl-material": "^1.0.0",
     "react-router-dom": "^4.3.1",
-    "rrc": "^0.10.1"
+    "rrc": "^0.10.1",
+    "typeface-roboto": "0.0.54"
   },
   "devDependencies": {
     "enzyme": "^3.7.0",

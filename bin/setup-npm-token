@@ -1,0 +1,6 @@
+#!/bin/bash
+
+if [ "${CI}" == "true" ]; then
+ # Doesn't work when run from codeship-steps.yml
+ echo '//registry.npmjs.org/:_authToken=${NPM_TOKEN}' >> .npmrc
+fi

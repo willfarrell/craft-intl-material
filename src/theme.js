@@ -2,6 +2,8 @@ import { createMuiTheme } from '@material-ui/core/styles';
 import createPalette from '@material-ui/core/styles/createPalette';
 import { indigo, pink, red, grey } from '@material-ui/core/colors';
 
+import 'typeface-roboto';
+
 // https://material-ui-1dab0.firebaseapp.com/customization/themes/#customizing-all-instances-of-a-component-type
 // https://material-ui-1dab0.firebaseapp.com/style/color/
 
