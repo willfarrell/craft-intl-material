@@ -16,7 +16,8 @@
     "react-intl-material": "^1.0.0",
     "react-router-dom": "^4.3.1",
     "rrc": "^0.10.1",
-    "typeface-roboto": "0.0.54"
+    "typeface-roboto": "0.0.54",
+    "snyk": "^1.319.1"
   },
   "devDependencies": {
     "enzyme": "^3.8.0",
@@ -32,12 +33,15 @@
     "test": "react-scripts test --env=jsdom --setupTestFrameworkScriptFile=raf/polyfill",
     "eject": "react-scripts eject",
     "lint": "eslint --fix --max-warnings=0 --config=./.eslintrc --ext .js --ext .json ./src/.",
-    "scan": "sonarwhal http://dev.domain.com"
+    "scan": "sonarwhal http://dev.domain.com",
+    "snyk-protect": "snyk protect",
+    "prepare": "npm run snyk-protect"
   },
   "browserslist": [
     ">0.2%",
     "not dead",
     "not ie <= 11",
     "not op_mini all"
-  ]
+  ],
+  "snyk": true
 }
